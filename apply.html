@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot Beans Web | Apply</title>
+  <meta name="description" content="Apply for a junior web developer role at Hot Beans Web. We're hiring front-end, full-stack, and UI/UX developers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ══ NAV ═══════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Hot Beans Web — Home">
+        <span class="logo-beans" aria-hidden="true">☕</span>
+        <span class="logo-text">Hot Beans Web</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="trainees.html" class="nav-link">Trainees</a>
+        <a href="courses.html"  class="nav-link">Courses</a>
+        <a href="jobs.html"     class="nav-link">Jobs</a>
+        <a href="apply.html"    class="nav-link nav-link--apply active" aria-current="page">Apply</a>
+      </nav>
+      <button class="hamburger" id="hamburger"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="nav-links">
+        <span class="hamburger-icon" aria-hidden="true">☰</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══ MAIN ══════════════════════════════════════════════ -->
+  <main>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+      <h1>Apply for a Role</h1>
+      <p>Fill in the form below and we'll be in touch within 5 working days. Fields marked <span style="color:#e05353" aria-hidden="true">*</span> are required.</p>
+    </header>
+
+    <!-- FORM -->
+    <section class="section" aria-label="Application form">
+      <div class="container-narrow">
+        <div class="form-container">
+
+          <form id="application-form" novalidate aria-label="Job application form">
+
+            <!-- Fieldset 1: Personal Details -->
+            <fieldset>
+              <legend>Personal Details</legend>
+
+              <div class="form-group">
+                <label for="full-name">
+                  Full Name <span class="required-marker" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full_name"
+                  placeholder="e.g. Jane Smith"
+                  autocomplete="name"
+                  aria-required="true"
+                  aria-describedby="full-name-error"
+                >
+                <p class="error-message" id="full-name-error" role="alert">
+                  Please enter your full name.
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label for="email">
+                  Email Address <span class="required-marker" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="e.g. jane@email.com"
+                  autocomplete="email"
+                  aria-required="true"
+                  aria-describedby="email-error"
+                >
+                <p class="error-message" id="email-error" role="alert">
+                  Please enter a valid email address.
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">
+                  Phone Number <span class="required-marker" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="e.g. 07700 900000"
+                  autocomplete="tel"
+                  aria-required="true"
+                  aria-describedby="phone-error"
+                >
+                <p class="error-message" id="phone-error" role="alert">
+                  Please enter a valid UK phone number.
+                </p>
+              </div>
+            </fieldset>
+
+            <!-- Fieldset 2: Application Details -->
+            <fieldset>
+              <legend>Application Details</legend>
+
+              <div class="form-group">
+                <label for="position">
+                  Position Applying For <span class="required-marker" aria-hidden="true">*</span>
+                </label>
+                <select
+                  id="position"
+                  name="position"
+                  aria-required="true"
+                  aria-describedby="position-error"
+                >
+                  <option value="" disabled selected>Select a position…</option>
+                  <option value="front-end">Junior Front-End Developer</option>
+                  <option value="full-stack">Junior Full-Stack Developer</option>
+                  <option value="ui-ux">Junior UI/UX Developer</option>
+                </select>
+                <p class="error-message" id="position-error" role="alert">
+                  Please select a position.
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label for="cv-upload">
+                  Upload CV <span class="required-marker" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="file"
+                  id="cv-upload"
+                  name="cv"
+                  accept=".pdf,.doc,.docx"
+                  aria-required="true"
+                  aria-describedby="cv-hint cv-error"
+                >
+                <p class="hint-text" id="cv-hint">Accepted formats: .pdf, .doc, .docx</p>
+                <p class="error-message" id="cv-error" role="alert">
+                  Please upload your CV in an accepted format (.pdf, .doc, or .docx).
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label for="cover-letter">
+                  Why would you be a good fit for Hot Beans Web?
+                  <span class="required-marker" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  id="cover-letter"
+                  name="cover_letter"
+                  rows="6"
+                  placeholder="Tell us about yourself and why you want to join the team…"
+                  aria-required="true"
+                  aria-describedby="cover-letter-error"
+                ></textarea>
+                <p class="error-message" id="cover-letter-error" role="alert">
+                  Please write a short cover letter (at least 20 characters).
+                </p>
+              </div>
+            </fieldset>
+
+            <!-- Fieldset 3: Declaration -->
+            <fieldset>
+              <legend>Declaration</legend>
+
+              <div class="form-group">
+                <label class="checkbox-label" for="declaration">
+                  <input
+                    type="checkbox"
+                    id="declaration"
+                    name="declaration"
+                    aria-required="true"
+                    aria-describedby="declaration-error"
+                  >
+                  <span>
+                    I confirm that all information I have provided is accurate and truthful.
+                    <span class="required-marker" aria-hidden="true">*</span>
+                  </span>
+                </label>
+                <p class="error-message" id="declaration-error" role="alert">
+                  You must confirm this declaration to submit.
+                </p>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary btn--full">
+              Submit Application
+            </button>
+
+          </form>
+
+          <!-- Success message — shown by apply.js on valid submission -->
+          <div id="success-message" class="success-message-wrap" style="display:none"
+               role="status" aria-live="polite">
+            <div class="success-icon" aria-hidden="true">✓</div>
+            <h2>Application Submitted</h2>
+            <p>Thank you for applying to Hot Beans Web. We'll be in touch within 5 working days.</p>
+            <a href="index.html" class="btn btn-primary"
+               style="margin-top: var(--sp-6); display:inline-flex">
+              Return to Homepage
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <span class="footer-name">Hot Beans Web</span>
+        <p class="footer-tagline">Building the web, one handcrafted line at a time.</p>
+      </div>
+      <div class="footer-col footer-social">
+        <a href="#" class="social-link" aria-label="Hot Beans Web on Twitter / X"
+           target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="Hot Beans Web on LinkedIn"
+           target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="Hot Beans Web on GitHub"
+           target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="footer-col footer-copy">
+        <p>&copy; 2026 Hot Beans Web. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/components.js"></script>
+  <script src="js/apply.js"></script>
+</body>
+</html>
