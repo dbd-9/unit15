@@ -278,7 +278,7 @@ a { color: inherit; }
 
 /* Apply link styled as an accent pill */
 .nav-link--apply {
-  background: var(--accent);
+  background: transparent;
   color: #0f0e0c !important;
   font-weight: 600;
   padding: var(--sp-2) var(--sp-4);
@@ -411,7 +411,7 @@ a { color: inherit; }
    8. HERO SECTION  (index.html)
    ============================================================ */
 .hero {
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
